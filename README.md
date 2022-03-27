@@ -59,3 +59,10 @@ Timeout means how long should the bot retry to find an website element. Set 20se
 - Bangladash Hacker Group: UBH Bypass Plugin
 - B4tm4n: Exploit Shell
 ### WP-XPL0IT is only for EDUCATIONAL PURPOSES
+
+# Run
+```python wp-bot.py pcdelay_in_seconds`
+// example:
+python wp-bot.py 5
+
+// Meaning the bot will once he controls your mouse it will wait everytime 5 seconds to scan and locate an element```
